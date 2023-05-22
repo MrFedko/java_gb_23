@@ -3,6 +3,9 @@ package ru.geekbrains.lesson1.sample;
 import ru.geekbrains.lesson1.regular.Decorator;
 import ru.geekbrains.lesson1.regular.OtherClass;
 
+/**
+ * javadoc -encoding utf8 -d docs -sourcepath ./java -cp ./out -subpackages ru
+ */
 public class Main {
     public static void main(String[] args) {
         int result = OtherClass.add(2, 3);
