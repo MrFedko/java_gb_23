@@ -98,6 +98,7 @@ public class Program {
 
     /**
      * Check rows/columns/all diagonals for strike of repeating char
+     *
      * @param player
      * @return
      */
@@ -166,18 +167,17 @@ public class Program {
     static boolean checkDraw() {
         for (int x = 0; x < fieldSizeX; x++) {
             for (int y = 0; y < fieldSizeY; y++) {
-                if (isCellEmpty(x, y)) return false;
+                if (isCellEmpty(x, y)) return true;
             }
         }
-        return true;
+        System.out.println("Draw. Maybe another one?");
+        return false;
     }
 
-    static boolean gameCheck(char player, String str){
-        if (checkWin(player)){
+    static boolean gameCheck(char player, String str) {
+        if (checkWin(player)) {
             System.out.println(str);
             return true;
-        } else if (checkDraw()) {
-            System.out.println("Draw. Maybe another one?");
         }
         return false;
     }
@@ -185,7 +185,7 @@ public class Program {
     public static void main(String[] args) {
         initField();
         printField();
-        while (true) {
+        while (checkDraw()) {
             humanTurn();
             printField();
             if (gameCheck(DOT_HUMAH, "Human is WIN !!!")) {
@@ -199,3 +199,4 @@ public class Program {
         }
     }
 }
+
