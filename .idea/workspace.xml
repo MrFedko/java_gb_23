@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1656acff-25a5-47d4-9e1b-4dfc66482089" name="Changes" comment="lesson 1 docker">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/geekbrains/lesson2/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    <list default="true" id="1656acff-25a5-47d4-9e1b-4dfc66482089" name="Changes" comment="lesson 2 tic-tac-toe">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/geekbrains/lesson2/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/geekbrains/lesson2/Program.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684753545447</updated>
-      <workItem from="1684753546813" duration="14986000" />
+      <workItem from="1684753546813" duration="15218000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1684756504598</created>
@@ -119,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684760172545</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="lesson 2 tic-tac-toe">
+      <created>1685309771656</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685309771656</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +144,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lesson 1" />
     <MESSAGE value="lesson 1 docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 1 docker" />
+    <MESSAGE value="lesson 2 tic-tac-toe" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 2 tic-tac-toe" />
   </component>
 </project>

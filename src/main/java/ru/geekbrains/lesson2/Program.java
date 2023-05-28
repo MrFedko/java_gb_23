@@ -163,6 +163,24 @@ public class Program {
         return false;
     }
 
+    static boolean checkDraw() {
+        for (int x = 0; x < fieldSizeX; x++) {
+            for (int y = 0; y < fieldSizeY; y++) {
+                if (isCellEmpty(x, y)) return false;
+            }
+        }
+        return true;
+    }
+
+    static boolean gameCheck(char player, String str){
+        if (checkWin(player)){
+            System.out.println(str);
+            return true;
+        } else if (checkDraw()) {
+            System.out.println("Draw. Maybe another one?");
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         initField();
@@ -170,14 +188,13 @@ public class Program {
         while (true) {
             humanTurn();
             printField();
-            if (checkWin(DOT_HUMAH)) {
-                System.out.println("Human is WIN !!!");
+            if (gameCheck(DOT_HUMAH, "Human is WIN !!!")) {
                 break;
             }
             botTurn();
             printField();
-            if (checkWin(DOT_BOT)) {
-                System.out.println("Bot is WIN !!!");
+            if (gameCheck(DOT_BOT, "Bot is WIN !!!")) {
+                break;
             }
         }
     }
