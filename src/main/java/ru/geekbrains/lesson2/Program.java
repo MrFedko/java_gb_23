@@ -13,6 +13,9 @@ public class Program {
     private static int fieldSizeX;
     private static int fieldSizeY;
 
+    /**
+     * init field from terminal
+     */
     private static void initField() {
         do {
             System.out.printf("Введите высоту X (от 1) и ширину Y (от 1) через пробел >>> %n");
@@ -27,6 +30,10 @@ public class Program {
         }
     }
 
+
+    /**
+     * print field
+     */
     private static void printField() {
         System.out.print(" +");
         for (int i = 0; i < fieldSizeY * 2 + 1; i++) {
@@ -51,6 +58,9 @@ public class Program {
         System.out.println();
     }
 
+    /**
+     * get human turn from terminal
+     */
     private static void humanTurn() {
         int x, y;
         do {
@@ -64,6 +74,9 @@ public class Program {
         field[x][y] = DOT_HUMAH;
     }
 
+    /**
+     * get bot turn from random modul
+     */
     private static void botTurn() {
         int x, y;
         do {
@@ -164,6 +177,11 @@ public class Program {
         return false;
     }
 
+
+    /**
+     * Check draw game
+     * @return
+     */
     static boolean checkDraw() {
         for (int x = 0; x < fieldSizeX; x++) {
             for (int y = 0; y < fieldSizeY; y++) {
@@ -174,6 +192,12 @@ public class Program {
         return false;
     }
 
+    /**
+     * Check win of player
+     * @param player
+     * @param str
+     * @return
+     */
     static boolean gameCheck(char player, String str) {
         if (checkWin(player)) {
             System.out.println(str);
@@ -182,6 +206,13 @@ public class Program {
         return false;
     }
 
+
+    /**
+     * init field from user
+     * print field
+     * request a move until there is a draw or victory
+     * @param args
+     */
     public static void main(String[] args) {
         initField();
         printField();
