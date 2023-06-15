@@ -80,6 +80,7 @@ CMD java -classpath ./out ru.geekbrains.lesson1.sample.Main
 
 # Урок 4. Обработка исключений
 
+[link for directory](src/main/java/ru/geekbrains/lesson4/)
 - Напишите метод, на вход которого подаётся двумерный строковый массив размером 4х4. При
 подаче массива другого размера необходимо бросить исключение MyArraySizeException.
 - Далее метод должен пройтись по всем элементам массива, преобразовать в int и
