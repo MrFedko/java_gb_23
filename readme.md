@@ -77,3 +77,58 @@ CMD java -classpath ./out ru.geekbrains.lesson1.sample.Main
       }
   }
   ```
+
+# Урок 4. Обработка исключений
+
+- Напишите метод, на вход которого подаётся двумерный строковый массив размером 4х4. При
+подаче массива другого размера необходимо бросить исключение MyArraySizeException.
+- Далее метод должен пройтись по всем элементам массива, преобразовать в int и
+просуммировать. Если в каком-то элементе массива преобразование не удалось (например, в
+ячейке лежит символ или текст вместо числа), должно быть брошено исключение
+MyArrayDataException с детализацией, в какой именно ячейке лежат неверные данные.
+- В методе main() вызвать полученный метод, обработать возможные исключения
+MyArraySizeException и MyArrayDataException и вывести результат расчета.
+
+```java
+class MyArraySizeException extends Exception {
+}
+
+class MyArrayDataException extends Exception {
+    private int row;
+    private int column;
+
+    public MyArrayDataException(int row, int column) {
+        this.row = row;
+        this.column = column;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+}
+```
+
+```java
+public static int processArray(String[][] array) throws MyArraySizeException, MyArrayDataException {
+    if (array.length != 4 || array[0].length != 4) {
+        throw new MyArraySizeException();
+    }
+
+    int sum = 0;
+    for (int i = 0; i < array.length; i++) {
+        for (int j = 0; j < array[i].length; j++) {
+            try {
+                sum += Integer.parseInt(array[i][j]);
+            } catch (NumberFormatException e) {
+                throw new MyArrayDataException(i, j);
+            }
+        }
+    }
+
+    return sum;
+}
+```
