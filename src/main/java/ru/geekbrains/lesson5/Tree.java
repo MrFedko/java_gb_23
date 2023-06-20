@@ -3,6 +3,12 @@ package ru.geekbrains.lesson5;
 import java.io.File;
 
 public class Tree {
+    /**
+     * recursive print tree of files and folders
+     * @param file file to print
+     * @param indent level of subfolder
+     * @param isLast this file is last?
+     */
     public static void print(File file, String indent, boolean isLast) {
         System.out.print(indent);
 
